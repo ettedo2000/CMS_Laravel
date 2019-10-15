@@ -11,6 +11,24 @@
 |
 */
 
+//Route::resource('posts', 'PostController');
+Route::get('/contact', 'PostController@contact');
+Route::get('post/{id}/{name}', 'PostController@show_post');
+
+/*Route::get('/post/{id}', 'PostController@index');
+
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 });
+
+Route::get('/post/{id}', function ($id) {
+	return 'this is ID '.$id;
+
+});
+
+Route::get('admin/post/example', array('as'=>'admin.home', function () {
+	$url = route('admin.home');
+
+	return 'this is '. $url;
+
+}));*/
