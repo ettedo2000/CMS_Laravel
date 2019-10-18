@@ -12,8 +12,19 @@
 */
 
 //Route::resource('posts', 'PostController');
-Route::get('/contact', 'PostController@contact');
-Route::get('post/{id}/{name}', 'PostController@show_post');
+
+Route::get('/insert', function(){
+
+	DB::insert('insert into post(title,content) values(?,?)',
+		['PHP with Laravel','afdfdfdfds dfdsfds sdf dsf dfd fds fdfdsf']);
+
+
+
+});
+
+/*Route::get('/contact', 'PostController@contact');
+Route::get('post/{id}/{name}', 'PostController@show_post');*/
+
 
 /*Route::get('/post/{id}', 'PostController@index');
 
